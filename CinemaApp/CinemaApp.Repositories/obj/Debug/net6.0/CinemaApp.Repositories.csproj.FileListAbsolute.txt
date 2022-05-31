@@ -1,0 +1,17 @@
+D:\CinemaApp\CinemaApp\CinemaApp.Repositories\bin\Debug\net6.0\CinemaApp.Repositories.deps.json
+D:\CinemaApp\CinemaApp\CinemaApp.Repositories\bin\Debug\net6.0\CinemaApp.Repositories.dll
+D:\CinemaApp\CinemaApp\CinemaApp.Repositories\bin\Debug\net6.0\CinemaApp.Repositories.pdb
+D:\CinemaApp\CinemaApp\CinemaApp.Repositories\bin\Debug\net6.0\CinemaApp.Models.dll
+D:\CinemaApp\CinemaApp\CinemaApp.Repositories\bin\Debug\net6.0\CinemaApp.Models.pdb
+D:\CinemaApp\CinemaApp\CinemaApp.Repositories\obj\Debug\net6.0\CinemaApp.Repositories.csproj.AssemblyReference.cache
+D:\CinemaApp\CinemaApp\CinemaApp.Repositories\obj\Debug\net6.0\CinemaApp.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\CinemaApp\CinemaApp\CinemaApp.Repositories\obj\Debug\net6.0\CinemaApp.Repositories.AssemblyInfoInputs.cache
+D:\CinemaApp\CinemaApp\CinemaApp.Repositories\obj\Debug\net6.0\CinemaApp.Repositories.AssemblyInfo.cs
+D:\CinemaApp\CinemaApp\CinemaApp.Repositories\obj\Debug\net6.0\CinemaApp.Repositories.csproj.CoreCompileInputs.cache
+D:\CinemaApp\CinemaApp\CinemaApp.Repositories\obj\Debug\net6.0\CinemaApp.Repositories.csproj.CopyComplete
+D:\CinemaApp\CinemaApp\CinemaApp.Repositories\obj\Debug\net6.0\CinemaApp.Repositories.dll
+D:\CinemaApp\CinemaApp\CinemaApp.Repositories\obj\Debug\net6.0\refint\CinemaApp.Repositories.dll
+D:\CinemaApp\CinemaApp\CinemaApp.Repositories\obj\Debug\net6.0\CinemaApp.Repositories.pdb
+D:\CinemaApp\CinemaApp\CinemaApp.Repositories\obj\Debug\net6.0\ref\CinemaApp.Repositories.dll
+D:\CinemaApp\CinemaApp\CinemaApp.Repositories\bin\Debug\net6.0\CinemaApp.Repositories.runtimeconfig.json
+D:\CinemaApp\CinemaApp\CinemaApp.Repositories\obj\Debug\net6.0\CinemaApp.Repositories.genruntimeconfig.cache

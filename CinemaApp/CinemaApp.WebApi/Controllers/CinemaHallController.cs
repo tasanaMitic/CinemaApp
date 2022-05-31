@@ -45,7 +45,7 @@ namespace CinemaApp.WebApi.Controllers
             //return Ok(_cinemaHallService.GetAllCinemaHalls());
             return Ok();
         }
-
+        
         [HttpDelete("{id}")]
         public IActionResult DeleteCinemaHall(int id)
         {
