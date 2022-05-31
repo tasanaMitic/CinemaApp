@@ -662,6 +662,19 @@
           }
         }
       },
+      "CinemaApp.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CinemaApp.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CinemaApp.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CinemaApp.Common.dll": {}
+        }
+      },
       "CinemaApp.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2055,6 +2068,11 @@
         "version.txt"
       ]
     },
+    "CinemaApp.Common/1.0.0": {
+      "type": "project",
+      "path": "../CinemaApp.Common/CinemaApp.Common.csproj",
+      "msbuildProject": "../CinemaApp.Common/CinemaApp.Common.csproj"
+    },
     "CinemaApp.Models/1.0.0": {
       "type": "project",
       "path": "../CinemaApp.Models/CinemaApp.Models.csproj",
@@ -2063,6 +2081,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "CinemaApp.Common >= 1.0.0",
       "CinemaApp.Models >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.5",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.5",
@@ -2103,6 +2122,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "D:\\CinemaApp\\CinemaApp\\CinemaApp.Common\\CinemaApp.Common.csproj": {
+              "projectPath": "D:\\CinemaApp\\CinemaApp\\CinemaApp.Common\\CinemaApp.Common.csproj"
+            },
             "D:\\CinemaApp\\CinemaApp\\CinemaApp.Models\\CinemaApp.Models.csproj": {
               "projectPath": "D:\\CinemaApp\\CinemaApp\\CinemaApp.Models\\CinemaApp.Models.csproj"
             }

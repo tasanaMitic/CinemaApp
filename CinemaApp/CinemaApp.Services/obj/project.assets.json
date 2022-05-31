@@ -5,11 +5,24 @@
       "CinemaApp.Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CinemaApp.Models": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/CinemaApp.Common.dll": {}
         },
         "runtime": {
           "bin/placeholder/CinemaApp.Common.dll": {}
+        }
+      },
+      "CinemaApp.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CinemaApp.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CinemaApp.Models.dll": {}
         }
       }
     }
@@ -19,6 +32,11 @@
       "type": "project",
       "path": "../CinemaApp.Common/CinemaApp.Common.csproj",
       "msbuildProject": "../CinemaApp.Common/CinemaApp.Common.csproj"
+    },
+    "CinemaApp.Models/1.0.0": {
+      "type": "project",
+      "path": "../CinemaApp.Models/CinemaApp.Models.csproj",
+      "msbuildProject": "../CinemaApp.Models/CinemaApp.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {

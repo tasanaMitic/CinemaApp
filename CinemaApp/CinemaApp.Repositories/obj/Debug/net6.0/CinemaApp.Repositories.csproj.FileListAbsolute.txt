@@ -15,3 +15,5 @@ D:\CinemaApp\CinemaApp\CinemaApp.Repositories\obj\Debug\net6.0\CinemaApp.Reposit
 D:\CinemaApp\CinemaApp\CinemaApp.Repositories\obj\Debug\net6.0\ref\CinemaApp.Repositories.dll
 D:\CinemaApp\CinemaApp\CinemaApp.Repositories\bin\Debug\net6.0\CinemaApp.Repositories.runtimeconfig.json
 D:\CinemaApp\CinemaApp\CinemaApp.Repositories\obj\Debug\net6.0\CinemaApp.Repositories.genruntimeconfig.cache
+D:\CinemaApp\CinemaApp\CinemaApp.Repositories\bin\Debug\net6.0\CinemaApp.Common.dll
+D:\CinemaApp\CinemaApp\CinemaApp.Repositories\bin\Debug\net6.0\CinemaApp.Common.pdb

@@ -724,6 +724,9 @@
       "CinemaApp.Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CinemaApp.Models": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/CinemaApp.Common.dll": {}
         },
@@ -745,6 +748,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "CinemaApp.Common": "1.0.0",
           "CinemaApp.Models": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.5",

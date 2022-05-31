@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "CinemaApp.Common/1.0.0": {
+        "dependencies": {
+          "CinemaApp.Models": "1.0.0"
+        },
         "runtime": {
           "CinemaApp.Common.dll": {}
+        }
+      },
+      "CinemaApp.Models/1.0.0": {
+        "runtime": {
+          "CinemaApp.Models.dll": {}
         }
       }
     }
   },
   "libraries": {
     "CinemaApp.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CinemaApp.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

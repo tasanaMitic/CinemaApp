@@ -1,5 +1,6 @@
 ﻿using CinemaApp.Common.Interfaces;
 using CinemaApp.Repositories.Context;
+using CinemaApp.Repositories.UnitOfWork;
 using CinemaApp.Services.Services;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,8 @@ namespace CinemaApp.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<CinemaContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DbConnectionString")));
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+
             services.AddScoped<ICinemaHallService>(serviceProvider => new CinemaHallService());
 
             services.AddControllers();

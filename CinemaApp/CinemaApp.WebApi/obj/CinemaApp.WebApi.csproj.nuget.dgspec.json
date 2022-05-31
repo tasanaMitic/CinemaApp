@@ -31,7 +31,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\CinemaApp\\CinemaApp\\CinemaApp.Models\\CinemaApp.Models.csproj": {
+                "projectPath": "D:\\CinemaApp\\CinemaApp\\CinemaApp.Models\\CinemaApp.Models.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -148,6 +152,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "D:\\CinemaApp\\CinemaApp\\CinemaApp.Common\\CinemaApp.Common.csproj": {
+                "projectPath": "D:\\CinemaApp\\CinemaApp\\CinemaApp.Common\\CinemaApp.Common.csproj"
+              },
               "D:\\CinemaApp\\CinemaApp\\CinemaApp.Models\\CinemaApp.Models.csproj": {
                 "projectPath": "D:\\CinemaApp\\CinemaApp\\CinemaApp.Models\\CinemaApp.Models.csproj"
               }

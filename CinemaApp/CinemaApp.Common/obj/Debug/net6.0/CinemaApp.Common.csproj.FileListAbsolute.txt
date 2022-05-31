@@ -10,3 +10,6 @@ D:\CinemaApp\CinemaApp\CinemaApp.Common\obj\Debug\net6.0\CinemaApp.Common.dll
 D:\CinemaApp\CinemaApp\CinemaApp.Common\obj\Debug\net6.0\refint\CinemaApp.Common.dll
 D:\CinemaApp\CinemaApp\CinemaApp.Common\obj\Debug\net6.0\CinemaApp.Common.pdb
 D:\CinemaApp\CinemaApp\CinemaApp.Common\obj\Debug\net6.0\ref\CinemaApp.Common.dll
+D:\CinemaApp\CinemaApp\CinemaApp.Common\bin\Debug\net6.0\CinemaApp.Models.dll
+D:\CinemaApp\CinemaApp\CinemaApp.Common\bin\Debug\net6.0\CinemaApp.Models.pdb
+D:\CinemaApp\CinemaApp\CinemaApp.Common\obj\Debug\net6.0\CinemaApp.Common.csproj.CopyComplete

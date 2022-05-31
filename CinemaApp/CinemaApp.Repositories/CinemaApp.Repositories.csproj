@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CinemaApp.Common\CinemaApp.Common.csproj" />
     <ProjectReference Include="..\CinemaApp.Models\CinemaApp.Models.csproj" />
   </ItemGroup>
 
