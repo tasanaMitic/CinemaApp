@@ -2,7 +2,9 @@ D:\CinemaApp\CinemaApp\CinemaApp.Services\bin\Debug\net6.0\CinemaApp.Services.de
 D:\CinemaApp\CinemaApp\CinemaApp.Services\bin\Debug\net6.0\CinemaApp.Services.dll
 D:\CinemaApp\CinemaApp\CinemaApp.Services\bin\Debug\net6.0\CinemaApp.Services.pdb
 D:\CinemaApp\CinemaApp\CinemaApp.Services\bin\Debug\net6.0\CinemaApp.Common.dll
+D:\CinemaApp\CinemaApp\CinemaApp.Services\bin\Debug\net6.0\CinemaApp.Models.dll
 D:\CinemaApp\CinemaApp\CinemaApp.Services\bin\Debug\net6.0\CinemaApp.Common.pdb
+D:\CinemaApp\CinemaApp\CinemaApp.Services\bin\Debug\net6.0\CinemaApp.Models.pdb
 D:\CinemaApp\CinemaApp\CinemaApp.Services\obj\Debug\net6.0\CinemaApp.Services.csproj.AssemblyReference.cache
 D:\CinemaApp\CinemaApp\CinemaApp.Services\obj\Debug\net6.0\CinemaApp.Services.GeneratedMSBuildEditorConfig.editorconfig
 D:\CinemaApp\CinemaApp\CinemaApp.Services\obj\Debug\net6.0\CinemaApp.Services.AssemblyInfoInputs.cache
@@ -13,5 +15,3 @@ D:\CinemaApp\CinemaApp\CinemaApp.Services\obj\Debug\net6.0\CinemaApp.Services.dl
 D:\CinemaApp\CinemaApp\CinemaApp.Services\obj\Debug\net6.0\refint\CinemaApp.Services.dll
 D:\CinemaApp\CinemaApp\CinemaApp.Services\obj\Debug\net6.0\CinemaApp.Services.pdb
 D:\CinemaApp\CinemaApp\CinemaApp.Services\obj\Debug\net6.0\ref\CinemaApp.Services.dll
-D:\CinemaApp\CinemaApp\CinemaApp.Services\bin\Debug\net6.0\CinemaApp.Models.dll
-D:\CinemaApp\CinemaApp\CinemaApp.Services\bin\Debug\net6.0\CinemaApp.Models.pdb

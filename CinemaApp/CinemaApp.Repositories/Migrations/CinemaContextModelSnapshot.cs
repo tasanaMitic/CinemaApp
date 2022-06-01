@@ -121,20 +121,35 @@ namespace CinemaApp.Repositories.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Name")
+                    b.Property<int>("Number")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("ProjectionId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("Sold")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Username")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ProjectionId");
+
+                    b.HasIndex("Username");
 
                     b.ToTable("Tickets");
                 });
 
             modelBuilder.Entity("CinemaApp.Models.Models.User", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("Username")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -152,11 +167,7 @@ namespace CinemaApp.Repositories.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
+                    b.HasKey("Username");
 
                     b.ToTable("Users");
                 });
@@ -185,6 +196,25 @@ namespace CinemaApp.Repositories.Migrations
                     b.Navigation("Cinemahall");
 
                     b.Navigation("Film");
+                });
+
+            modelBuilder.Entity("CinemaApp.Models.Models.Ticket", b =>
+                {
+                    b.HasOne("CinemaApp.Models.Models.Projection", "Projection")
+                        .WithMany()
+                        .HasForeignKey("ProjectionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CinemaApp.Models.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("Username")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Projection");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("CinemaApp.Models.Models.Film", b =>

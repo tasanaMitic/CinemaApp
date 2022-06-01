@@ -13,5 +13,7 @@ namespace CinemaApp.Common.Interfaces
         //IEnumerable<User> GetAllUsers(string userRole);
         //IEnumerable<User> SearchUsers(string username, string userRole);
         IEnumerable<User> Find(string username, string userRole);
+        bool RemoveByUserName(string username);
+        void UpdateUser(User user);
     }
 }

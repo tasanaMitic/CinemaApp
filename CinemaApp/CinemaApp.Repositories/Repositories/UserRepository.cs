@@ -12,5 +12,16 @@ namespace CinemaApp.Repositories.Repositories
         {
             throw new NotImplementedException();
         }
+
+        //TODO
+        public bool RemoveByUserName(string username)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateUser(User user)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

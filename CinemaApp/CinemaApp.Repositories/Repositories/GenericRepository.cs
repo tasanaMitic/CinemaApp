@@ -53,6 +53,7 @@ namespace CinemaApp.Repositories.Repositories
         {
             try
             {
+                //TODO provera sa id
                 _context.Set<T>().Update(entity);
             }
             catch (DbUpdateConcurrencyException e)

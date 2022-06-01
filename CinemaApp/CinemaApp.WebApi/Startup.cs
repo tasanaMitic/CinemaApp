@@ -16,9 +16,14 @@ namespace CinemaApp.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<CinemaContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DbConnectionString")));
-            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            //services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddTransient(serviceProvider => new UnitOfWork(serviceProvider.GetService<CinemaContext>()));
 
-            services.AddScoped<ICinemaHallService>(serviceProvider => new CinemaHallService());
+            services.AddScoped<ICinemaHallService>(serviceProvider => new CinemaHallService(serviceProvider.GetService<IUnitOfWork>()));
+            services.AddScoped<IFilmService>(serviceProvider => new FilmService(serviceProvider.GetService<IUnitOfWork>()));
+            services.AddScoped<IProjectionService>(serviceProvider => new ProjectionService(serviceProvider.GetService<IUnitOfWork>()));
+            services.AddScoped<ITicketService>(serviceProvider => new TicketService(serviceProvider.GetService<IUnitOfWork>()));
+            services.AddScoped<IUserService>(serviceProvider => new UserService(serviceProvider.GetService<IUnitOfWork>()));
 
             services.AddControllers();
         }

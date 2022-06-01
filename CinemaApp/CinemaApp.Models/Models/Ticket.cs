@@ -12,6 +12,14 @@ namespace CinemaApp.Models.Models
         [Key]
         public Guid Id { get; set; }
         [Required]
-        public string Name { get; set; }
+        public int Number { get; set; }
+        [Required]
+        public int Price { get; set; }
+        [Required]
+        public bool Sold { get; set; }
+        [Required]
+        public User User { get; set;  }
+        [Required]
+        public Projection Projection { get; set; }
     }
 }
