@@ -1,5 +1,4 @@
-﻿
-using CinemaApp.Common.Dtos;
+﻿using CinemaApp.Common.Dtos;
 
 namespace CinemaApp.Common.Interfaces
 {

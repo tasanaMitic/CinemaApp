@@ -1,5 +1,4 @@
-﻿
-namespace CinemaApp.Common.Dtos
+﻿namespace CinemaApp.Common.Dtos
 {
     public class CinemaHallDto
     {

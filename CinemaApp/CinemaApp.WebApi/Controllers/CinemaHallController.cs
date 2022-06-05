@@ -24,8 +24,8 @@ namespace CinemaApp.WebApi.Controllers
                 {
                     return BadRequest();
                 }
-                //Guid cinemaHallId = _cinemaHallService.AddCinemaHall(cinemaHall);
-                //return CreatedAtAction("AddCinemaHall", new { Id = cinemaHallId }, cinemaHall);
+                Guid cinemaHallId = _cinemaHallService.AddCinemaHall(cinemaHall);
+                return CreatedAtAction("AddCinemaHall", new { Id = cinemaHallId }, cinemaHall);
                 return Ok();
             }
             catch (ArgumentException e)
@@ -42,15 +42,13 @@ namespace CinemaApp.WebApi.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<CinemaHallDtoId>> GetAllCinemaHalls()
         {
-            //return Ok(_cinemaHallService.GetAllCinemaHalls());
-            return Ok();
+            return Ok(_cinemaHallService.GetAllCinemaHalls());
         }
         
         [HttpDelete("{id}")]
-        public IActionResult DeleteCinemaHall(int id)
+        public IActionResult DeleteCinemaHall(Guid id)
         {
-            return Ok();
-            //return _cinemaHallService.DeleteCinemaHall(id) ? (IActionResult)NoContent() : NotFound();
+            return _cinemaHallService.DeleteCinemaHall(id) ? (IActionResult)NoContent() : NotFound();
         }
     }
 }
