@@ -1,7 +1,8 @@
-﻿using CinemaApp.Common.Interfaces;
+﻿ using CinemaApp.Common.Interfaces;
 using CinemaApp.Repositories.Context;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
+using System.Linq.Expressions;
 
 namespace CinemaApp.Repositories.Repositories
 {
@@ -24,6 +25,12 @@ namespace CinemaApp.Repositories.Repositories
                 throw new DuplicateNameException();
             }
         }
+
+        public IEnumerable<T> Find(Expression<Func<T, bool>> expression)
+        {
+            return _context.Set<T>().Where(expression);
+        }
+
         public IEnumerable<T> GetAll()
         {
             return _context.Set<T>().ToList();
@@ -35,6 +42,21 @@ namespace CinemaApp.Repositories.Repositories
         }
 
         public bool Remove(Guid id)
+        {
+            try
+            {
+                var entity = _context.Set<T>().Find(id);
+                _context.Set<T>().Remove(entity);
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        public bool Remove(int id)
         {
             try
             {

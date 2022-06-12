@@ -1,10 +1,5 @@
 ﻿using CinemaApp.Models.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CinemaApp.Repositories.Context
 {
@@ -16,9 +11,27 @@ namespace CinemaApp.Repositories.Context
         public DbSet<Projection> Projections { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Genre> Genres { get; set; }
+        public DbSet<FilmGenre> FilmGenres { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+ #region genre
+            modelBuilder.Entity<Genre>().HasIndex(c => c.Name).IsUnique();
+            modelBuilder.Entity<Genre>().HasData(
+                new Genre { Id = 1, Name = "Drama" },
+                new Genre { Id = 2, Name = "Comedy" },
+                new Genre { Id = 3, Name = "Sci-Fi" },
+                new Genre { Id = 4, Name = "Romantic" },
+                new Genre { Id = 5, Name = "Thriller" },
+                new Genre { Id = 6, Name = "Horror" },
+                new Genre { Id = 7, Name = "Crime" },
+                new Genre { Id = 8, Name = "Mystery" }
+                );
+#endregion
+
             modelBuilder.Entity<Cinemahall>().HasIndex(c => c.Name).IsUnique();
+            modelBuilder.Entity<Film>().HasIndex(c => new {c.Name, c.Director}).IsUnique();
+            modelBuilder.Entity<FilmGenre>().HasIndex(c => new {c.FilmId, c.GenreId}).IsUnique();
         }
 
 

@@ -18,7 +18,7 @@ namespace CinemaApp.Services.Services
         }
         public Guid AddProjection(ProjectionDto projectionDto)
         {
-            Guid id = new Guid();
+            Guid id = Guid.NewGuid();
             Film film = _unitOfWork.FilmRepository.GetById(projectionDto.FilmId);
             Cinemahall cinemaHall = _unitOfWork.CinemaHallRepository.GetById(projectionDto.CinemaHallId);
             _unitOfWork.ProjectionRepository.Add(new Projection { Id = id, 

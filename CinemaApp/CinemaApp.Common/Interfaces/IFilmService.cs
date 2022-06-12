@@ -6,7 +6,6 @@ namespace CinemaApp.Common.Interfaces
     {
         Guid AddFilm(FilmDto filmDto);
         IEnumerable<FilmDtoId> GetAllFilms();
-        IEnumerable<FilmDtoId> SearchFilms(string criteria);
         bool DeleteFilm(Guid id);
     }
 }

@@ -13,7 +13,7 @@ namespace CinemaApp.Services.Services
         }
         public Guid AddCinemaHall(CinemaHallDto cinemaHallDto)
         {
-            Guid id = new Guid();
+            Guid id = Guid.NewGuid();
             _unitOfWork.CinemaHallRepository.Add(new Cinemahall {Id = id, 
                                                                 Name =  cinemaHallDto.Name, 
                                                                 NmbrOfSeats = cinemaHallDto.NumberOfSeats });

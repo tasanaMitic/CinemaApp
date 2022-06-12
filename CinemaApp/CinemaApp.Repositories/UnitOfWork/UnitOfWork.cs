@@ -17,6 +17,7 @@ namespace CinemaApp.Repositories.UnitOfWork
         public IProjectionRepository ProjectionRepository { get; private set; }
         public ITicketRepository TicketRepository { get; private set; }
         public IUserRepository UserRepository { get; private set; }
+        public IFilmGenreRepository FilmGenreRepository { get; set; }
         public UnitOfWork(CinemaContext context)
         {
             _context = context;
@@ -25,6 +26,7 @@ namespace CinemaApp.Repositories.UnitOfWork
             ProjectionRepository = new ProjectionRepository(_context);
             TicketRepository = new TicketRepository(_context);
             UserRepository = new UserRepository(_context);
+            FilmGenreRepository = new FilmGenreRepository(_context);
         }
 
         public void Dispose()

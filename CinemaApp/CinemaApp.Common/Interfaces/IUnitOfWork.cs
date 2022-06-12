@@ -7,5 +7,6 @@
         IProjectionRepository ProjectionRepository { get; }
         ITicketRepository TicketRepository { get; }
         IUserRepository UserRepository { get; }
+        IFilmGenreRepository FilmGenreRepository { get; }
     }
 }

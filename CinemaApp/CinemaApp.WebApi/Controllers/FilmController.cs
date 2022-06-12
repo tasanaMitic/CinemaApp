@@ -45,11 +45,11 @@ namespace CinemaApp.WebApi.Controllers
             return Ok(_filmService.GetAllFilms());
         }
 
-        [HttpGet]
-        public ActionResult<IEnumerable<FilmDtoId>> SearchFilms(string criteria)
-        {
-            return Ok(_filmService.SearchFilms(criteria));
-        }
+        //[HttpGet]
+        //public ActionResult<IEnumerable<FilmDtoId>> SearchFilms(string criteria)              //TODO
+        //{
+        //    return Ok(_filmService.SearchFilms(criteria));    
+        //}
 
         [HttpDelete("{id}")]
         public IActionResult DeleteFilm(Guid id)

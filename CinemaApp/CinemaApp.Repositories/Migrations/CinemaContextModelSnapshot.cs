@@ -51,41 +51,108 @@ namespace CinemaApp.Repositories.Migrations
 
                     b.Property<string>("Director")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("Duration")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("ReleaseYear")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Name", "Director")
+                        .IsUnique();
+
                     b.ToTable("Films");
                 });
 
             modelBuilder.Entity("CinemaApp.Models.Models.FilmGenre", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<Guid>("FilmId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("FilmId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("GenreName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("GenreId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("FilmId");
+                    b.HasIndex("FilmId", "GenreId")
+                        .IsUnique();
 
-                    b.ToTable("FilmGenre");
+                    b.ToTable("FilmGenres");
+                });
+
+            modelBuilder.Entity("CinemaApp.Models.Models.Genre", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
+
+                    b.ToTable("Genres");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Drama"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Comedy"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Sci-Fi"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Romantic"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "Thriller"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Name = "Horror"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Name = "Crime"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Name = "Mystery"
+                        });
                 });
 
             modelBuilder.Entity("CinemaApp.Models.Models.Projection", b =>
@@ -175,13 +242,6 @@ namespace CinemaApp.Repositories.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("CinemaApp.Models.Models.FilmGenre", b =>
-                {
-                    b.HasOne("CinemaApp.Models.Models.Film", null)
-                        .WithMany("Genre")
-                        .HasForeignKey("FilmId");
-                });
-
             modelBuilder.Entity("CinemaApp.Models.Models.Projection", b =>
                 {
                     b.HasOne("CinemaApp.Models.Models.Cinemahall", "Cinemahall")
@@ -218,11 +278,6 @@ namespace CinemaApp.Repositories.Migrations
                     b.Navigation("Projection");
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("CinemaApp.Models.Models.Film", b =>
-                {
-                    b.Navigation("Genre");
                 });
 #pragma warning restore 612, 618
         }

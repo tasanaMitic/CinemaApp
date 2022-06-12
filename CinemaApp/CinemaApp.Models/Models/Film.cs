@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.ComponentModel.DataAnnotations;
 namespace CinemaApp.Models.Models
 {
     public class Film
@@ -19,7 +13,5 @@ namespace CinemaApp.Models.Models
         public int Duration { get; set; }
         [Required]
         public int ReleaseYear { get; set; }
-        [Required]
-        public IEnumerable<FilmGenre> Genre { get; set; }
     }
 }

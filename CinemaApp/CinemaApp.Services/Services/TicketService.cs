@@ -14,7 +14,7 @@ namespace CinemaApp.Services.Services
         public Guid BuyTicket(TicketDto ticketDto)
         {
             //TODO
-            Guid id = new Guid();
+            Guid id = Guid.NewGuid();
             User user = _unitOfWork.UserRepository.GetById(new Guid()); // username
             Projection projection = _unitOfWork.ProjectionRepository.GetById(ticketDto.ProjectionId);
             _unitOfWork.TicketRepository.Add(new Ticket { Id = id,
