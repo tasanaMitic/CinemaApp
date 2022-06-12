@@ -71,12 +71,12 @@ namespace CinemaApp.Repositories.Repositories
             }
         }
 
-        public void Update(Guid id, T entity)
+        public void Update(T entity)
         {
             try
             {
-                //TODO provera sa id
                 _context.Set<T>().Update(entity);
+                _context.SaveChanges();
             }
             catch (DbUpdateConcurrencyException e)
             {

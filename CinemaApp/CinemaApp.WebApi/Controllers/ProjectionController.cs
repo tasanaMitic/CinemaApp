@@ -39,7 +39,7 @@ namespace CinemaApp.WebApi.Controllers
 
         }
 
-        [HttpGet]
+        [HttpGet("{date}")]
         public ActionResult<IEnumerable<ProjectionDtoId>> GetProjections(string date)
         {
             return Ok(_projectionService.GetProjections(date));

@@ -4,5 +4,6 @@ namespace CinemaApp.Common.Interfaces
 {
     public interface IProjectionRepository : IGenericRepository<Projection>
     {
+        IEnumerable<Projection> GetAllProjections();
     }
 }

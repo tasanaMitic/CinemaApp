@@ -16,7 +16,7 @@ namespace CinemaApp.Repositories.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
  #region genre
-            modelBuilder.Entity<Genre>().HasIndex(c => c.Name).IsUnique();
+            modelBuilder.Entity<Genre>().HasIndex(x => x.Name).IsUnique();
             modelBuilder.Entity<Genre>().HasData(
                 new Genre { Id = 1, Name = "Drama" },
                 new Genre { Id = 2, Name = "Comedy" },
@@ -29,9 +29,9 @@ namespace CinemaApp.Repositories.Context
                 );
 #endregion
 
-            modelBuilder.Entity<Cinemahall>().HasIndex(c => c.Name).IsUnique();
-            modelBuilder.Entity<Film>().HasIndex(c => new {c.Name, c.Director}).IsUnique();
-            modelBuilder.Entity<FilmGenre>().HasIndex(c => new {c.FilmId, c.GenreId}).IsUnique();
+            modelBuilder.Entity<Cinemahall>().HasIndex(x => x.Name).IsUnique();
+            modelBuilder.Entity<Film>().HasIndex(x => new {x.Name, x.Director}).IsUnique();
+            modelBuilder.Entity<FilmGenre>().HasIndex(x => new {x.FilmId, x.GenreId}).IsUnique();
         }
 
 

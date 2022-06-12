@@ -9,7 +9,7 @@ namespace CinemaApp.Common.Interfaces
         void Add(T entity);
         bool Remove(Guid id);
         bool Remove(int id);
-        void Update(Guid id, T entity);
+        void Update(T entity);
         IEnumerable<T> Find(Expression<Func<T,bool>> expression);
     }
 }
